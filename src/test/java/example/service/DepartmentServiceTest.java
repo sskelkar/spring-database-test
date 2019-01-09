@@ -34,7 +34,6 @@ public class DepartmentServiceTest extends AbstractTransactionalJUnit4SpringCont
     jdbcTemplate.execute("insert into employee values(3, 'george', 40)");
 
     //when
-    departmentDAO.getById(30);
     List<Employee> employees = departmentService.getEmployeesInDepartment("admin");
 
     //then
