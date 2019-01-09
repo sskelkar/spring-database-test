@@ -5,7 +5,7 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 @Repository
-public class DepartmentDAO extends BaseDAO{
+public class DepartmentDAO extends BaseDAO {
 
   @Transactional
   public Department getById(Integer id) {
