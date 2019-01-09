@@ -1,7 +1,6 @@
 package example.service;
 
 import example.TestConfiguration;
-import example.dao.DepartmentDAO;
 import example.model.Employee;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -21,8 +20,6 @@ import static org.junit.Assert.assertEquals;
 public class DepartmentServiceTest extends AbstractTransactionalJUnit4SpringContextTests {
   @Resource
   private DepartmentService departmentService;
-  @Resource
-  private DepartmentDAO departmentDAO;
 
   @Test
   public void shouldReturnEmployeesInAGivenDepartment() {
