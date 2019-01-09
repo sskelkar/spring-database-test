@@ -24,11 +24,11 @@ public class DepartmentServiceTest extends AbstractTransactionalJUnit4SpringCont
   @Test
   public void shouldReturnEmployeesInAGivenDepartment() {
     //given
-    jdbcTemplate.execute("insert into department values(30, 'admin')");
-    jdbcTemplate.execute("insert into department values(40, 'support')");
-    jdbcTemplate.execute("insert into employee values(1, 'john', 30)");
-    jdbcTemplate.execute("insert into employee values(2, 'paul', 30)");
-    jdbcTemplate.execute("insert into employee values(3, 'george', 40)");
+    jdbcTemplate.execute("insert into department(id, name) values(30, 'admin')");
+    jdbcTemplate.execute("insert into department(id, name) values(40, 'support')");
+    jdbcTemplate.execute("insert into employee(id, name, department_id) values(1, 'john', 30)");
+    jdbcTemplate.execute("insert into employee(id, name, department_id) values(2, 'paul', 30)");
+    jdbcTemplate.execute("insert into employee(id, name, department_id) values(3, 'george', 40)");
 
     //when
     List<Employee> employees = departmentService.getEmployeesInDepartment("admin");
