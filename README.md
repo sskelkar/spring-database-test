@@ -4,16 +4,20 @@ Blogged at: https://betweencurlybraces.wordpress.com/2019/01/12/database-integra
 Master branch contains the application code without tests.
 
 ### 1. Integration tests using MySQL
-`git checkout mysql`
 Prerequisite: Docker version 1.6.0 or above.
-Command: `gradle clean test`
+
+`git checkout mysql`
+
+`./gradlew clean test`
 
 ### 2. Integration tests using H2
 `git checkout h2`
-Command: `gradle clean test`
+
+`./gradlew clean test`
 
 ### 3. Toggle between H2 and MySQL 
 `git checkout both`
-Commands: 
-`gradle clean test` for H2
-`gradle clean test -DtestDB=mysql` for MySQL
+
+`./gradlew clean test` for H2
+
+`./gradlew clean test -DtestDB=mysql` for MySQL
